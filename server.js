@@ -76,10 +76,12 @@ app.get('/shoes', (req, res) => {
     result = result.filter(shoe => shoe.type === type);
   }
 
+  // Check if number
   if (!isNaN(min)) {
     result = result.filter(shoe => shoe.price >= min);
   }
 
+  // Check if number
   if (!isNaN(max)) {
     result = result.filter(shoe => shoe.price <= max);
   }
